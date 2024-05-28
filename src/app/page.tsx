@@ -1,113 +1,104 @@
-import Image from "next/image";
+"use client"
+import React, { useRef, useState, useEffect } from 'react';
+import { LinkedInLogoIcon, GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import Home_ from "@/components/mycustom/home";
+import Globe from "@/components/globe";
+import { useInView } from "framer-motion"
+import { useDispatch } from 'react-redux';
+import { set_current_link_index } from '@/app/redux/features/basic';
+import { motion } from 'framer-motion'
+import Nav from '@/components/nav';
+import Web1 from "@/components/mycustom/web1";
+import Web2 from "@/components/mycustom/web2";
+import Web3 from "@/components/mycustom/web3";
+import Stack from "@/components/mycustom/stack";
+import Mobile from "@/components/mycustom/mobile";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        //  alert("Element is in view: " + isInView)
+        if (isInView) {
+            dispatch(set_current_link_index(0))
+        }
+    }, [isInView])
+
+    return (
+        <div className="pl-[5%] pr-[5%]" style={{  backgroundColor: "#000000"}}>
+            <Nav></Nav>
+            <Home_ />
+            <div className="mt-5 flex flex-row gap-3 justify-center max-[830px]:flex-wrap" ref={ref} id={'home'}>
+                <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
+                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                        <p className="text-white"> <LinkedInLogoIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></LinkedInLogoIcon></p>
+                        <p className={`font_700 xl:text-xl md:text-sm text-white`}>
+                            Linkedin
+                        </p>
+                    </Link>
+
+                </motion.div>
+                <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
+                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                        <p className="text-white"> <GitHubLogoIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></GitHubLogoIcon></p>
+                        <p className={`font_700 xl:text-xl md:text-sm text-white`}>
+                            Github
+                        </p>
+                    </Link>
+                </motion.div>
+                <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
+                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                        <p className={`font_700 xl:text-xl md:text-sm text-white`}>
+                            Fiverr
+                        </p>
+                    </Link>
+                </motion.div>
+                <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
+                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                        <p className={`font_700 xl:text-xl md:text-sm text-white`}>
+                            Upwork
+                        </p>
+                    </Link>
+                </motion.div>
+                <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
+                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                        <p className={`font_700 xl:text-xl md:text-sm text-white`}>
+                            Malt
+                        </p>
+                    </Link>
+                </motion.div>
+            </div>
+            <div className="flex flex-row gap-2 mt-5  max-[1000px]:flex-wrap">
+                <div className="custom-nav-css xl:w-[40%] max-[1000px]:w-[100%] rounded-3xl p-10 xl:items-start items-center justify-center flex flex-col">
+                    <Globe></Globe>
+                    <div className="md:mt-20 mt-10">
+                        <p className={`font_700 xl:text-5xl md:text-5xl text-white md:w-[300px]`}>
+                            Based in France, Caen
+                        </p>
+                    </div>
+                </div>
+                <div className="custom-nav-css xl:w-[60%] max-[1000px]:w-[100%] rounded-3xl p-10">
+                    <div className="mt-5">
+                        <p className={`font_700 xl:text-3xl md:text-3xl text-white`}>
+                            I specialize in developing mobile apps with React Native (Expo) and web apps with React (Next.js).
+                            <span style={{ color: "#848484" }}>
+                                For the backend, I use Laravel (PHP). I've been freelancing for two years and have been passionate about computers since childhood.
+                                I'm motivated and ready to work on new projects. With a keen eye for detail and a commitment to delivering quality,
+                                I'm excited to bring your ideas to life. Let's create something amazing together!
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <Web2 />
+            <Mobile />
+            <Web1 />
+            <Web3 />
+            <Stack />
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    );
 }
