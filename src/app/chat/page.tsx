@@ -17,7 +17,7 @@ import { useDispatch } from 'react-redux';
 import { set_current_link_index } from '../redux/features/basic';
 
 
-const page = () => {
+const Page = () => {
   // const [scope, animate] = useAnimate()
   // const handleHoverStart = async () => {
   //     animate(scope.current, { color: "#fff" }, { duration: 1 })
@@ -266,4 +266,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

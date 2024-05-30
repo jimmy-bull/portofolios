@@ -15,7 +15,7 @@ import Web3 from "@/components/mycustom/web3";
 import Stack from "@/components/mycustom/stack";
 import Mobile from "@/components/mycustom/mobile";
 
-export default function Home() {
+export default function Page() {
     const ref = useRef(null)
     const isInView = useInView(ref)
     const dispatch = useDispatch()
