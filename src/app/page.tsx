@@ -87,7 +87,7 @@ export default function Page() {
                             <span style={{ color: "#848484" }}>
                                 For the backend, I use Laravel (PHP). I&apos;ve been freelancing for two years and have been passionate about computers since childhood.
                                 I&apos;m motivated and ready to work on new projects. With a keen eye for detail and a commitment to delivering quality,
-                                I&apos;m excited to bring your ideas to life. Let's create something amazing together!
+                                I&apos;m excited to bring your ideas to life. Let&apos;s create something amazing together!
                             </span>
                         </p>
                     </div>
