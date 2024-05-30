@@ -64,7 +64,7 @@ const Nav = () => {
 
     
     return (
-        <nav className='custom-nav-css  p-5 rounded-3xl flex justify-between items-center	sticky top-5 z-50'>
+        <nav className='custom-nav-css space-mono-regular  p-5 rounded-3xl flex justify-between items-center	sticky top-5 z-50'>
             <div>
                 <Link href={"#home"} className='text-white'>Bull Jimmy.</Link>
             </div>
@@ -89,8 +89,8 @@ const Nav = () => {
 
             <div className='flex gap-6 sm:hidden items-center'>
                 <Link href={"#home"} className='text-white'><HomeIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></HomeIcon> </Link>
-                <Link href={"#home"} className='text-white'>< Pencil1Icon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></ Pencil1Icon> </Link>
-                <Link href={"#Contact"} className='text-white text-2xl'><EnvelopeClosedIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></EnvelopeClosedIcon> </Link>
+                <Link href={"#project"} className='text-white'>< Pencil1Icon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></ Pencil1Icon> </Link>
+                <Link href={"#contact"} className='text-white text-2xl'><EnvelopeClosedIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></EnvelopeClosedIcon> </Link>
             </div>
         </nav>
     );

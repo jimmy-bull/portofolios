@@ -33,7 +33,7 @@ export default function Home() {
             <Home_ />
             <div className="mt-5 flex flex-row gap-3 justify-center max-[830px]:flex-wrap" ref={ref} id={'home'}>
                 <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
-                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                    <Link target='_blank' href={"https://www.linkedin.com/in/bullyj/"} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
                         <p className="text-white"> <LinkedInLogoIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></LinkedInLogoIcon></p>
                         <p className={`font_700 xl:text-xl md:text-sm text-white`}>
                             Linkedin
@@ -42,7 +42,7 @@ export default function Home() {
 
                 </motion.div>
                 <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
-                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                    <Link href={"https://github.com/jimmy-bull"} target='_blank' className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
                         <p className="text-white"> <GitHubLogoIcon className='text-2xl h-5 w-5 min-[340px]:h-4 min-[340px]:w-4'></GitHubLogoIcon></p>
                         <p className={`font_700 xl:text-xl md:text-sm text-white`}>
                             Github
@@ -50,21 +50,21 @@ export default function Home() {
                     </Link>
                 </motion.div>
                 <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
-                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                    <Link target='_blank' href={"https://fr.fiverr.com/bulljimmy"} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
                         <p className={`font_700 xl:text-xl md:text-sm text-white`}>
                             Fiverr
                         </p>
                     </Link>
                 </motion.div>
                 <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
-                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                    <Link target='_blank' href={"https://www.upwork.com/freelancers/~01d1356a6558cd5a4c"} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
                         <p className={`font_700 xl:text-xl md:text-sm text-white`}>
                             Upwork
                         </p>
                     </Link>
                 </motion.div>
                 <motion.div className='cursor-pointer' whileHover={{ scale: 1.1 }} transition={{ ease: "easeOut", duration: .5 }}>
-                    <Link href={""} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
+                    <Link target='_blank' href={"https://www.malt.fr/profile/bulljimmy"} className="custom-nav-css  p-4 rounded-3xl flex items-center gap-2 ">
                         <p className={`font_700 xl:text-xl md:text-sm text-white`}>
                             Malt
                         </p>

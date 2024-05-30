@@ -1,14 +1,39 @@
 ._body {
-          background-image: linear-gradient(to bottom, #d0d2d9, #adb8e5, #8a9eef, #6782f7, #3e66fb);
-          height: 80vh;
+    background-image: linear-gradient(to bottom, #ffffff, #dbd6ff, #b4affe, #8589fd, #3e66fb);
+    height: 100vh;
 }
 
 .custom-nav-css_ {
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .font_700 {
-          font-family: "Space Mono", monospace;
-          font-weight: 700;
-          font-style: normal;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
 }

@@ -19,7 +19,7 @@ const Web1 = () => {
     }, [isInView])
 
     return (
-        <div ref={ref} className="custom-nav-css w-full  rounded-3xl p-10 mt-5" id={'project'}>
+        <div ref={ref} className="custom-nav-css space-mono-regular w-full  rounded-3xl p-10 mt-5" id={'project'}>
             <div className='flex justify-between items-center'>
                 <strong className={` xl:text-4xl md:text-3xl text-white`} >Inverstiraupays</strong>
                 <button className=" hover:bg-mauve3 shadow-blackA4 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] outline-none focus:shadow-[0_0_0_2px] focus:shadow-black">

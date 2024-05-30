@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Web4 = () => {
     return (
-        <div className="custom-nav-css w-full  rounded-3xl p-10 mt-5">
+        <div className="custom-nav-css w-full space-mono-regular  rounded-3xl p-10 mt-5">
             <div className='flex justify-between items-center'>
                 <strong className={` xl:text-4xl md:text-3xl text-white`} >E-Commerce Template</strong>
                 <AlertDialog.Root>

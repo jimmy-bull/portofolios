@@ -1,8 +1,10 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Avatar, AvatarFallback, AvatarImage, } from "@/components/ui/avatar"
 // import { LinkedInLogoIcon, GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
+import { motion, useAnimate, useScroll } from 'framer-motion'
+
 
 import { useInView } from "framer-motion"
 import { useDispatch } from 'react-redux';
@@ -17,13 +19,24 @@ const Stack = () => {
         //  alert("Element is in view: " + isInView)
         if (isInView) {
             dispatch(set_current_link_index(2))
-        }else{
+        } else {
             dispatch(set_current_link_index(1))
         }
     }, [isInView])
+
+    const [spanColor, setSpanColor] = useState('white');
+
+    const [scope, animate] = useAnimate()
+    const handleHoverStart = () => {
+        animate(scope.current, { color: "#000000" }, { duration: 1 })
+
+    };
+    const handleHoverEnd = () => {
+        animate(scope.current, { color: "#fff" }, { duration: 1 })
+    };
     return (
         <>
-            <div className="flex gap-2 mt-5 max-[700px]:flex-wrap ">
+            <div className="flex gap-2 mt-5 max-[700px]:flex-wrap space-mono-regular">
                 <div className="custom-nav-css w-[50%] max-[700px]:w-full  rounded-3xl p-10">
                     <div className="bg-white mt-5 p-4 rounded-3xl flex justify-center">
                         <span className={`font_700 xl:text-xl md:text-sm`}>Front-end Stack</span>
@@ -51,7 +64,7 @@ const Stack = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row gap-2 mt-5  max-[900px]:flex-wrap">
+            <div className="flex flex-row gap-2 mt-5  max-[900px]:flex-wrap space-mono-regular">
 
                 <div className="custom-nav-css w-full rounded-3xl p-10">
                     <div className="flex justify-center">
@@ -71,12 +84,22 @@ const Stack = () => {
                             Come Together
                         </p>
                     </div>
-                    <div style={{ background: "rgba(100, 255, 218, 0.3)" }} className=" min-[821px]:mt-20 max-[820px]:mt-10  p-4 rounded-3xl flex justify-center">
-                        <span className={`font_700 xl:text-xl md:text-3xl text-white`}>jbull635@gmail.com</span>
-                    </div>
+                    <motion.div
+                    onHoverStart={handleHoverStart}
+                    onHoverEnd={handleHoverEnd}
+                    initial={{ background: "rgba(100, 255, 218, 0.3)" }}
+                    whileHover={{
+                        background: '#fff',
+                    }}
+                    transition={{
+                        background: { duration: .5 }
+                    }}
+                    className=" min-[821px]:mt-20 max-[820px]:mt-10  p-4 rounded-3xl flex justify-center cursor-pointer">
+                    <motion.a href='mailto:jbull635@gmail.com' ref={scope} initial={{ color: spanColor }} className={`font_700 xl:text-xl md:text-3xl`}>jbull635@gmail.com</motion.a>
+                </motion.div>
                 </div>
             </div>
-            <div ref={ref} id={"contact"} className='custom-nav-css mt-10 p-5 rounded-3xl flex justify-between items-center	'>
+            <div ref={ref} id={"contact"} className='custom-nav-css mt-10 p-5 rounded-3xl flex justify-between items-center	space-mono-regular'>
                 <div>
                     <Link href={"#home"} className='text-white'>Bull Jimmy.</Link>
                 </div>

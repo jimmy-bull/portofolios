@@ -20,7 +20,7 @@ const Home_ = () => {
             <div className="custom-nav-css xl:w-[60%] max-[900px]:w-[100%] rounded-3xl p-10">
                 <div className="flex">
                     <Avatar className="h-[80px] w-[80px]">
-                        <AvatarImage src="/me.jpeg" />
+                        <AvatarImage  src="/me.jpeg" />
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                     <div className="bg-white mt-20 p-4 rounded-3xl">
@@ -65,7 +65,7 @@ const Home_ = () => {
                         background: { duration: .5 }
                     }}
                     className=" min-[821px]:mt-20 max-[820px]:mt-10  p-4 rounded-3xl flex justify-center cursor-pointer">
-                    <motion.span ref={scope} initial={{ color: spanColor }} className={`font_700 xl:text-xl md:text-3xl`}>jbull635@gmail.com</motion.span>
+                    <motion.a href='mailto:jbull635@gmail.com' ref={scope} initial={{ color: spanColor }} className={`font_700 xl:text-xl md:text-3xl`}>jbull635@gmail.com</motion.a>
                 </motion.div>
             </div>
         </div >
