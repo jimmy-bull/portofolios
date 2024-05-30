@@ -1,6 +1,6 @@
 "use client"
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
-import { Mono_space_700 } from '@/app/layout';
+// import { Mono_space_700 } from '@/app/layout';
 import Link from 'next/link';
 import Image from 'next/image';
 import chat1 from "../../../public/mobile/back.png"

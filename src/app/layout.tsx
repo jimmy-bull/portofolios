@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Mono } from "next/font/google";
 const mono = Space_Mono({ subsets: ["latin"], weight: "400" });
-export const Mono_space_700 = Space_Mono({ subsets: ["latin"], weight: "700", });
+// export const Mono_space_700 = Space_Mono({ subsets: ["latin"], weight: "700", });
 import { StoreProvider } from "./redux/storeprovider";
 
 export const metadata: Metadata = {
