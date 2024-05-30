@@ -8,7 +8,6 @@ import chat3 from "../../../public/mobile/3.png"
 import money from "../../../public/money.png"
 import data from "../../../public/data.png"
 import Image from 'next/image';
-import { Component } from '@/components/component';
 import { LinkedInLogoIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { motion, useAnimate, } from 'framer-motion'
@@ -154,8 +153,10 @@ const Page = () => {
               <h3 className='font_700 text-xl text-[#7376E3] mt-3 '>Cost Reduction.</h3>
 
               <p className='mt-5 text-center leading-20 text-[#c4c4c4]'>When considering a communication solution for your application, cost-efficiency and scalability are key factors. Sendbird, a popular option, charges $499 per month to support 500 users connected simultaneously.
-                In contrast, the application I'm developing offers a much more economical solution.
-                For just $300 per month, I am designing it to handle 18,000 users connected at the same time. This means the service will not only offer a lower monthly cost but also support significantly more users, making it an ideal choice for businesses looking to scale their user base without incurring prohibitive expenses. Choose the application I'm developing for a cost-effective and scalable communication solution.</p>
+                In contrast, the application I&apos;m developing offers a much more economical solution.
+                For just $300 per month, I am designing it to handle 18,000 users connected at the same time. This means the service will not only offer a lower monthly cost but also support significantly more users, making it an ideal choice for businesses looking
+                 to scale their user base without incurring prohibitive expenses. 
+                 Choose the application I&apos;m developing for a cost-effective and scalable communication solution.</p>
             </div>
             <div className='xl:w-[45%] md:w-full flex-wrap rounded-xl p-4' style={{ boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px", backgroundImage: "linear-gradient(to bottom, #ffffff, #dbd6ff, #b4affe, #8589fd, #3e66fb)" }}>
               <Image

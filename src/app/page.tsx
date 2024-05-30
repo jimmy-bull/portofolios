@@ -85,9 +85,9 @@ export default function Page() {
                         <p className={`font_700 xl:text-3xl md:text-3xl text-white`}>
                             I specialize in developing mobile apps with React Native (Expo) and web apps with React (Next.js).
                             <span style={{ color: "#848484" }}>
-                                For the backend, I use Laravel (PHP). I've been freelancing for two years and have been passionate about computers since childhood.
-                                I'm motivated and ready to work on new projects. With a keen eye for detail and a commitment to delivering quality,
-                                I'm excited to bring your ideas to life. Let's create something amazing together!
+                                For the backend, I use Laravel (PHP). I&apos;ve been freelancing for two years and have been passionate about computers since childhood.
+                                I&apos;m motivated and ready to work on new projects. With a keen eye for detail and a commitment to delivering quality,
+                                I&apos;m excited to bring your ideas to life. Let's create something amazing together!
                             </span>
                         </p>
                     </div>

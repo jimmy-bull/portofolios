@@ -29,7 +29,7 @@ export function Component() {
         <CardHeader>
           <CardTitle><span className="text-white">Get The App</span></CardTitle>
           <CardDescription>
-            <p className="mt-5 text-white">Fill out the form below and we'll get back to you as soon as possible.</p>
+            <p className="mt-5 text-white">Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
           </CardDescription>
         </CardHeader>
         <CardContent>

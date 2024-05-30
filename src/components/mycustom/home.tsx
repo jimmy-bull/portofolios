@@ -24,14 +24,14 @@ const Home_ = () => {
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                     <div className="bg-white mt-20 p-4 rounded-3xl">
-                        <span className={`font_700 xl:text-xl md:text-sm`}> Hello, i'm Bull Jimmy</span>
+                        <span className={`font_700 xl:text-xl md:text-sm`}> Hello, i&apos;m Bull Jimmy</span>
                     </div>
                 </div>
 
                 <div className="mt-5">
                     <p className={`font_700 xl:text-3xl md:text-3xl text-white`}>
                         I specialize in developing mobile and web applications.
-                        <span style={{ color: "#848484" }}>I'm currently seeking freelance business assignments or long-term freelance opportunities.</span>
+                        <span style={{ color: "#848484" }}>I&apos;m currently seeking freelance business assignments or long-term freelance opportunities.</span>
                     </p>
                 </div>
 
