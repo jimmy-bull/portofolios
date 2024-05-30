@@ -43,7 +43,7 @@ const Desc = ({ tech, desc, go, go_link }: props) => {
                 onHoverStart={handleHoverStart}
                 onHoverEnd={handleHoverEnd}
             >
-                <Link href={go_link} target='_blank'
+                <Link href={go_link} 
                 >
                     <motion.span ref={scope} initial={{ color: "#ff" }}> {go}</motion.span>
                 </Link>
