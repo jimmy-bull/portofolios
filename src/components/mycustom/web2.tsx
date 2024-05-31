@@ -32,6 +32,7 @@ const Web1 = () => {
                         src={web2}
                         alt="Picture of the author"
                         loading="lazy"
+                        placeholder='blur'
                     />
                 </div>
             </div>

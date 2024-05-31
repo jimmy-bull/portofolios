@@ -20,6 +20,7 @@ const Web3 = () => {
                         src={web3}
                         alt="Picture of the author"
                         loading="lazy"
+                        placeholder='blur'
                     />
                 </div>
             </div>
