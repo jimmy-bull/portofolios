@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { motion, useAnimate, } from 'framer-motion'
 import { useInView } from "framer-motion"
 import { useDispatch } from 'react-redux';
-import { set_current_link_index } from '../redux/features/basic';
+import {  } from '../redux/features/basic';
 
 
 const Page = () => {

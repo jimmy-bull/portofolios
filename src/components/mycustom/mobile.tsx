@@ -11,7 +11,7 @@ const Mobile = () => {
     return (
         <div className="custom-nav-css w-full  rounded-3xl p-10 mt-5 space-mono-regular">
             <div className='flex justify-between items-center'>
-                <strong className={` xl:text-4xl md:text-3xl text-white`} >Mobile Chat App</strong>
+                <strong className={`xl:text-4xl md:text-3xl text-white`} >Mobile Chat App</strong>
                 <button className=" hover:bg-mauve3 shadow-blackA4 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] outline-none focus:shadow-[0_0_0_2px] focus:shadow-black">
                     Full-Stack (IOS, ANDROID) Developer
                 </button>
