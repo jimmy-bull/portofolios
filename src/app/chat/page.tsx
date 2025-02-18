@@ -14,7 +14,7 @@ import { motion, useAnimate, } from 'framer-motion'
 import { useInView } from "framer-motion"
 import { useDispatch } from 'react-redux';
 import {  } from '../redux/features/basic';
-
+import { set_current_link_index } from '../redux/features/basic';
 
 const Page = () => {
   // const [scope, animate] = useAnimate()
