@@ -34,7 +34,3 @@ upwork, linkedin, github, Fiver, malt
 Je develope cette application de messagerie Cross Platform afin de concurence des platforme comme sendbird.
 
 
-
-git remote set-url origin https://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@github.com/bulljimmy/portofolio.git
-
- git remote set-url origin  https://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@github.com/ndiayeApp/portofolio.git
